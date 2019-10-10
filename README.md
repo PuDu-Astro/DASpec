@@ -34,11 +34,19 @@ Author: Pu Du
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/fit_wins.png" width="309" height="325">
 
-2. Set components: add or delete the components, and then select the checkboxes
+2. Set components: add or delete the components, and then select the checkboxes (each component has three lines: input parameters, lower limits and upper limits)
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/Components.png" width="684" height="583">
 
-Here, I used a powerlaw to model the AGN continuum, an Fe II template, a double-Gaussians for the broad component of Hbeta emission line, a Gaussian for each of the narrow emission lines (Hbeta, [OIII]4959,5007). 
+Here, I used 
+
+(a) a power law to model the AGN continuum with the parameters of flux and power law index (keyword "5100.0" means the first parameter is the flux at 5100A)
+
+(b) an Fe II template convolved by a Gaussian to model the Fe II emission, with the parameters of flux, width (km/s), shift (km/s) and (keyword "fetemplate_" is the name of the template file which has two columns: wavelength and flux, keywords "4434.0" and "4684.0" mean that the first parameter is integrated flux from 4434.0 and 4684.0)
+
+(c) a double-Gaussians for the broad component of Hbeta emission line with the parameters of flux, width of the first Gaussian, shift of the first Gaussian, width of the second Gaussian, shift of the second Gaussian, and the ratio of the first to the total line flux (keyword "4861.0" means the line center is located at 4861.0A)
+
+(d) a Gaussian for each of the narrow emission lines with the parameters of flux, width, and shift (Hbeta, [OIII]4959,5007). 
 
 3. If you want to tie the profiles of the emission lines: for example, tie component 7 to have the same profile as component 5, and tie the profile of component 6 to 5 with flux ratio 0.3333, then select the checkboxes and click "Update"
 
