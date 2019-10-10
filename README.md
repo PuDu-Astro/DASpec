@@ -42,7 +42,7 @@ Here, I used
 
 (a) a power law to model the AGN continuum with the parameters of flux and power law index (keyword "5100.0" means the first parameter is the flux at 5100A)
 
-(b) an Fe II template convolved by a Gaussian to model the Fe II emission, with the parameters of flux, width (km/s), shift (km/s) and (keyword "fetemplate_" is the name of the template file which has two columns: wavelength and flux, keywords "4434.0" and "4684.0" mean that the first parameter is integrated flux from 4434.0 and 4684.0)
+(b) an Fe II template convolved by a Gaussian to model the Fe II emission, with the parameters of flux, width (km/s), and shift (km/s) (keyword "fetemplate_" is the name of the template file which has two columns: wavelength and flux, keywords "4434.0" and "4684.0" mean that the first parameter is integrated flux from 4434.0 and 4684.0)
 
 (c) a double-Gaussians for the broad component of Hbeta emission line with the parameters of flux, width of the first Gaussian, shift of the first Gaussian, width of the second Gaussian, shift of the second Gaussian, and the ratio of the first to the total line flux (keyword "4861.0" means the line center is located at 4861.0A)
 
