@@ -46,7 +46,7 @@ Here, I used a powerlaw to model the AGN continuum, an Fe II template, a double-
 
 The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OIII]5007. And the flux ratio of [OIII]5007/4959 is fixed to 3.
 
-4. Begin fitting: Click lmfit (levenberg-Marquardt method) or mix_fit (similar to basinhopping with lmfit in Scipy)
+4. Begin fitting: Click lmfit (levenberg-Marquardt method) or mix_fit (similar to Basinhopping in Scipy)
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/fit_buttons.png" width="309" height="145">
 
