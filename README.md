@@ -38,7 +38,7 @@ Author: Pu Du
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/Components.png" width="684" height="583">
 
-3. If you want to tie the profiles of the emission lines: add or delete the components, then select the checkboxes and click "Update"
+3. If you want to tie the profiles of the emission lines: for example, tie component 7 to have the same profile as component 5, and tie the profile of component 6 to 5 with flux ratio 0.3333, then select the checkboxes and click "Update"
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/fit_tie.png" width="571" height="325">
 
