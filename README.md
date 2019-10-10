@@ -38,9 +38,13 @@ Author: Pu Du
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/Components.png" width="684" height="583">
 
+Here, I used a powerlaw to model the AGN continuum, an Fe II template, a double-Gaussians for the broad component of Hbeta emission line, a Gaussian for each of the narrow emission lines (Hbeta, [OIII]4959,5007). 
+
 3. If you want to tie the profiles of the emission lines: for example, tie component 7 to have the same profile as component 5, and tie the profile of component 6 to 5 with flux ratio 0.3333, then select the checkboxes and click "Update"
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/fit_tie.png" width="571" height="325">
+
+The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OIII]5007. And the flux ratio of [OIII]5007/4959 is fixed to 3.
 
 4. Begin fitting: Click lmfit (levenberg-Marquardt method) or mix_fit (similar to basinhopping with lmfit in Scipy)
 
