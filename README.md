@@ -5,6 +5,7 @@ A multi-component spectral fitting code for active galactic nuclei with GUI inte
 Version: 0.8
 
 Author: Pu Du
+
 email: dupu@ihep.ac.cn
 
 ### Dependency (please install them first):
