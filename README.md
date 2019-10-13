@@ -19,7 +19,7 @@ email: dupu@ihep.ac.cn
 ### Install:
 1. run "python setup.py build_ext --inplace"
 2. Add the path to your $PYTHONPATH
-3. Add "DASpec_TEMPLATE_PATH" in .bashrc as the directory of template files, e.g., export $DASpec_TEMPLATE_PATH="..."
+3. Add "DASpec_TEMPLATE_PATH" in .bashrc as the directory of template files, e.g., export DASpec_TEMPLATE_PATH="..."
 
 ### Usage:
 1. run "DASpec_GUI.py" or "DASpec_GUI_4k.py" (for 4k screen) directly
