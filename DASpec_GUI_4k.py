@@ -516,7 +516,7 @@ class GUI(Tkinter.Frame):
                 if self.models[i][-1][j * 2] <= self.models[i][-2][j] <= self.models[i][-1][j * 2 + 1]:
                     pass
                 else:
-                    print 'Warning!  par ', j + 1, ' in comp ', i + 1, ' without par limits!'
+                    print 'Warning!  par ', j + 1, ' in comp ', i + 1, ' out of par limits!'
 
     def addmodel_from_known(self, modelname, modelpar, par):
         #print self.addmodel_info
