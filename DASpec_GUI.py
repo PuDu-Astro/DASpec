@@ -785,8 +785,8 @@ class GUI(Tkinter.Frame):
                 if len(temp.split()) == 8:
                     tietype = ''
                     temp = temp.replace("->", "")
-                    temp.replace('ratio', '0')
-                    temp.replace('offset', '1')
+                    temp = temp.replace('ratio', '0')
+                    temp = temp.replace('offset', '1')
     
                     tiepar = []
                     for j in xrange(len(temp.split()) - 1):
