@@ -1,7 +1,8 @@
 # DASpec
 ## Decomposition of AGN Spectrum (DASpec)
 A multi-component spectral fitting code for active galactic nuclei with GUI interface
-(*You can tie the profile of an emission line to that of another one or fix any parameter to a specific value as you like*)
+
+(*Advantage of this code: You can tie the width or shift of an emission line to those of another one, or fix any parameter to a specific value as you like*)
 
 based on Python 2.7
 
