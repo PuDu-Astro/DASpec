@@ -74,5 +74,7 @@ The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OII
 
 7. If you want to begin from the last fitting: DASpec_GUI.py -s spectrum_file.txt -m spectrum_file.txt.out
 
+8. You can also fix the value of a parameter to a specific value in "Fix" window.
+
 ### Acknowledgement:
 I will appreciate if you can cite DASpec in your paper: e.g., \software{\cb DASpec \url{https://github.com/PuDu-Astro/DASpec}}
