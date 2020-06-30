@@ -42,6 +42,10 @@ email: dupu@ihep.ac.cn
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/Components.png" width="684" height="583">
 
+Each component has 3 rows with several "setting" parameters appearing only in the first rows and the other "to-fit" parameters appearing in all of the three rows.
+
+The "setting" parameters are some parameters that controls the formula of the component: e.g., $\lambda_0$ in the power law component $F_{\lambda}=F_{\lambda_0} (\lambda / \lambda_0)$.
+
 Here, I used 
 
 (a) a power law to model the AGN continuum with the parameters of flux and power law index (keyword "5100.0" means the first parameter is the flux at 5100A)
