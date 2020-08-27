@@ -78,5 +78,7 @@ The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OII
 
 8. You can also fix the value of a parameter to a specific value in "Fix" window.
 
+9. You can use "DASpec_extract_result.py" to read the output file. It is a class and can separate the names, windows, pars, etc., from the output file.
+
 ### Acknowledgement:
 I will appreciate if you can cite DASpec in your paper: e.g., \software{\cb DASpec \url{https://github.com/PuDu-Astro/DASpec}}
