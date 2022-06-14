@@ -82,5 +82,7 @@ The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OII
 
 10. If you perform fitting multiple times for a single object, you will find that there is a long output file. "DASpec_reduce.py" can do some cleaning to the output file and only keep the last fitting for each object: "DASpec_reduce.py *.out".
 
+11. If you would like to subtract any components (e.g., components 3, 4, and 5) from the spectra: DASpec_subtract_components.py spectrum_file.txt.out 3 4 5.
+
 ### Acknowledgement:
 I will appreciate if you can cite DASpec in your paper: e.g., \software{\cb DASpec \url{https://github.com/PuDu-Astro/DASpec}}
