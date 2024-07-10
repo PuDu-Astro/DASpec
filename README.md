@@ -85,4 +85,4 @@ The narrow Hbeta and [OIII]4959 are contrainted to have the same profile as [OII
 11. If you would like to subtract any components (e.g., components 3, 4, and 5) from the spectra: DASpec_subtract_components.py spectrum_file.txt.out 3 4 5.
 
 ### Acknowledgement:
-I will appreciate if you can cite DASpec in your paper: e.g., \software{\cb DASpec \url{https://github.com/PuDu-Astro/DASpec}}
+I will appreciate if you can cite DASpec in your paper: e.g., \software{\citep{Du2024}} and \bibitem[Du(2024)]{Du2024} Du, P.\ 2024, DASpec: A code for spectral decomposition of active galactic nuclei, v0.8, Zenodo, doi:10.5281/zenodo.12578529
