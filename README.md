@@ -21,9 +21,10 @@ email: dupu@ihep.ac.cn
 (apt install bwidget & https://sourceforge.net/projects/topographica/files/external-full-history/pybwidget-0.1.2_1.7.0.tar.gz/download for pybwidget)
 
 ### Install:
-1. run "python setup.py build_ext --inplace"
-2. Add the path to your $PYTHONPATH
-3. Add "DASpec_TEMPLATE_PATH" in .bashrc as the directory of template files, e.g., export DASpec_TEMPLATE_PATH="..."
+1. edit paths in setup.py to include GSL and cmpfit headers and libraries
+2. run "python setup.py build_ext --inplace"
+3. Add the path to your $PYTHONPATH
+4. Add "DASpec_TEMPLATE_PATH" in .bashrc as the directory of template files, e.g., export DASpec_TEMPLATE_PATH="..."
 
 ### Usage:
 1. run "DASpec_GUI.py" or "DASpec_GUI_4k.py" (for 4k screen) directly
