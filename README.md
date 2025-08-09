@@ -4,9 +4,9 @@ A multi-component spectral fitting code for active galactic nuclei with GUI inte
 
 (*Advantage of this code: You can tie the width or shift of an emission line to those of another one, or fix any parameter to a specific value as you like*)
 
-based on Python 2.7
+based on Python 3
 
-Version: 0.8
+Version: 0.9
 
 Author: Pu Du
 
