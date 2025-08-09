@@ -3,6 +3,7 @@
 """
 Author: Pu Du @ IHEP
 Date: 2016.07
+Update: 2025.04
 """
 
 import numpy as np
@@ -101,7 +102,7 @@ def str_to_model(arrays):
 
     for i in arrays:
         text = 'model.add(' + i + ')'
-        #print text
+        #print(text)
         eval(text)
     return model
 
@@ -121,7 +122,7 @@ class array(object):
         self.c_array = carray.newarray(self.len)
         self.py_array = p
 
-        for i in xrange(self.len):
+        for i in range(self.len):
             carray.setelement(self.c_array, i, p[i])
 
     def carray(self):
@@ -129,7 +130,7 @@ class array(object):
 
     def pyarray(self):
         p = []
-        for i in xrange(self.len):
+        for i in range(self.len):
             p.append(carray.getelement(self.c_array, i))
         return np.array(p)
 
@@ -238,22 +239,22 @@ class compcontainer(object):
         n = n - 1
 
         if n < 0 or n >= len(self.comps):
-            print "Error! n is invalid!"
+            print("Error! n is invalid!")
             sys.exit()
 
         pfit = par
 
-        #print self.model.comps[n].calc()
+        #print(self.model.comps[n].calc())
         nnp = 0
         if n == 0:
-            #print 'npar', self.model.comps[n].func.npar
+            #print('npar', self.model.comps[n].func.npar)
             p = pfit[0: self.comps[n].func.npar]
         else:
-            for i in xrange(n):
+            for i in range(n):
                 nnp += self.comps[i].func.npar
-            #print np
+            #print(np)
             p = pfit[nnp: nnp + self.comps[n].func.npar]
-        #print p
+        #print(p)
 
         y = [0.0 for i in x]
         cx = array(x)
@@ -267,22 +268,22 @@ class compcontainer(object):
         n = n - 1
 
         if n < 0 or n >= len(self.comps):
-            print "Error! n is invalid!"
+            print("Error! n is invalid!")
             sys.exit()
 
         pfit = par
 
-        #print self.model.comps[n].calc()
+        #print(self.model.comps[n].calc())
         nnp = 0
         if n == 0:
-            #print 'npar', self.model.comps[n].func.npar
+            #print('npar', self.model.comps[n].func.npar)
             p = pfit[0: self.comps[n].func.npar]
         else:
-            for i in xrange(n):
+            for i in range(n):
                 nnp += self.comps[i].func.npar
-            #print np
+            #print(np)
             p = pfit[nnp: nnp + self.comps[n].func.npar]
-        #print p
+        #print(p)
 
         return p
 
@@ -327,22 +328,22 @@ class curvefit(object):
 
     def set_limit_tot(self, p):
         if self.cp.len != len(p) / 2:
-            print 'error!! number of limits is not equal to the number of parameters!'
+            print('error!! number of limits is not equal to the number of parameters!')
             sys.exit()
-        for i in xrange(len(p) / 2):
-            #print i + 1, i * 2, i * 2 + 1
+        for i in range(len(p) / 2):
+            #print(i + 1, i * 2, i * 2 + 1)
             self.set_limit(i + 1, p[i * 2], 0)
             self.set_limit(i + 1, p[i * 2 + 1], 1)
 
     def lmfit(self, nitermax = 200):
         if self.model == 0:
-            print "Error! please set model for fitting!"
+            print("Error! please set model for fitting!")
             sys.exit()
         if self.cp == 0 or self.cp.len != self.model.netnpar():
-            print "Error! please set correct initial parameters for fitting!"
+            print("Error! please set correct initial parameters for fitting!")
             sys.exit()
         if self.cx == 0 or self.cy == 0 or self.cerr == 0:
-            print "Error! please set data for fitting!"
+            print("Error! please set data for fitting!")
             sys.exit()
         self.curvefit.lmfit(nitermax)
         self.fitdone = 1
@@ -350,13 +351,13 @@ class curvefit(object):
     def siman(self, ntmax = 50000, ninner = 5000, jump = 0.2,
             ninit = 2000, Tratio = 0.001, delta = 1.0e-6, nstable = 20):
         if self.model == 0:
-            print "Error! please set model for fitting!"
+            print("Error! please set model for fitting!")
             sys.exit()
         if self.cp == 0 or self.cp.len != self.model.netnpar():
-            print "Error! please set correct initial parameters for fitting!"
+            print("Error! please set correct initial parameters for fitting!")
             sys.exit()
         if self.cx == 0 or self.cy == 0 or self.cerr == 0:
-            print "Error! please set data for fitting!"
+            print("Error! please set data for fitting!")
             sys.exit()
         self.curvefit.siman(ntmax, ninner, jump, ninit, Tratio, delta, nstable)
         self.fitdone = 1
@@ -364,13 +365,13 @@ class curvefit(object):
     def mix_fit(self, ntmax = 50000, ninner = 200, jump = 0.2,
             ninit = 500, Tratio = 0.01, delta = 1.0e-5, nstable = 20):
         if self.model == 0:
-            print "Error! please set model for fitting!"
+            print("Error! please set model for fitting!")
             sys.exit()
         if self.cp == 0 or self.cp.len != self.model.netnpar():
-            print "Error! please set correct initial parameters for fitting!"
+            print("Error! please set correct initial parameters for fitting!")
             sys.exit()
         if self.cx == 0 or self.cy == 0 or self.cerr == 0:
-            print "Error! please set data for fitting!"
+            print("Error! please set data for fitting!")
             sys.exit()
         self.curvefit.mix_fit(ntmax, ninner, jump, ninit, Tratio, delta, nstable)
         self.fitdone = 1
@@ -383,7 +384,7 @@ class curvefit(object):
         """ calculate model using the fitted parameterr """
 
         if self.fitdone == 0:
-            print "Error! please do the fitting first!"
+            print("Error! please do the fitting first!")
             sys.exit()
 
         p = self.par()
@@ -396,26 +397,26 @@ class curvefit(object):
         n = n - 1
 
         if self.fitdone == 0:
-            print "Error! please do the fitting first!"
+            print("Error! please do the fitting first!")
             sys.exit()
 
         if n < 0 or n >= len(self.model.comps):
-            print "Error! n is invalid!"
+            print("Error! n is invalid!")
             sys.exit()
 
         pfit = self.par_tot()
 
-        #print self.model.comps[n].calc()
+        #print(self.model.comps[n].calc())
         nnp = 0
         if n == 0:
-            #print 'npar', self.model.comps[n].func.npar
+            #print('npar', self.model.comps[n].func.npar)
             p = pfit[0: self.model.comps[n].func.npar]
         else:
-            for i in xrange(n):
+            for i in range(n):
                 nnp += self.model.comps[i].func.npar
-            #print np
+            #print(np)
             p = pfit[nnp: nnp + self.model.comps[n].func.npar]
-        #print p
+        #print(p)
 
         y = [0.0 for i in x]
         cx = array(x)
@@ -427,28 +428,28 @@ class curvefit(object):
     def par(self):
         """ return final parameters """
         p = []
-        for i in xrange(self.curvefit.npout):
+        for i in range(self.curvefit.npout):
             p.append(carray.getelement(self.curvefit.pout, i))
         return np.array(p)
 
     def parerr(self):
         """ return error of parameters """
         p = []
-        for i in xrange(self.curvefit.npout):
+        for i in range(self.curvefit.npout):
             p.append(carray.getelement(self.curvefit.perrout, i))
         return np.array(p)
 
     def par_tot(self):
         """ return final parameters (tot) """
         p = []
-        for i in xrange(self.curvefit.npout_tot):
+        for i in range(self.curvefit.npout_tot):
             p.append(carray.getelement(self.curvefit.pout_tot, i))
         return np.array(p)
 
     def parerr_tot(self):
         """ return error of parameters (tot) """
         p = []
-        for i in xrange(self.curvefit.npout_tot):
+        for i in range(self.curvefit.npout_tot):
             p.append(carray.getelement(self.curvefit.perrout_tot, i))
         return np.array(p)
 
@@ -739,7 +740,7 @@ def test():
     import matplotlib.pyplot as plt
 
     fit = pyfits.open("spSpec-52368-0881-064.fit")
-    #print fit[0].header
+    #print(fit[0].header)
     wave0 = fit[0].header["CRVAL1"]
     nwave = fit[0].header["NAXIS1"]
     dwave = fit[0].header["CD1_1"]
@@ -803,12 +804,12 @@ def test():
 
     #fit.lmfit()
 
-    #print fit.par()
-    #print fit.parerr()
-    #print fit.par_tot()
-    #print fit.parerr_tot()
+    #print(fit.par())
+    #print(fit.parerr())
+    #print(fit.par_tot())
+    #print(fit.parerr_tot())
     #y = fit.calc_comp(1, [1, 2, 3])
-    #print fit.parerr()
+    #print(fit.parerr())
 
     fit.set_limit(1, 0, 0)
     fit.set_limit(1, 1000, 1)
@@ -846,13 +847,13 @@ def test():
     #fit.siman()
     fit.mix_fit()
     #fit.lmfit()
-    print fit.par()
-    print fit.parerr()
+    print(fit.par())
+    print(fit.parerr())
     #print fit.chisq()
 
     #fit.lmfit()
-    #print fit.par()
-    #print fit.parerr()
+    #print(fit.par())
+    #print(fit.parerr())
 
     plt.plot(wave, flux)
     plt.plot(wave, fit.calc(wave))

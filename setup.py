@@ -4,11 +4,13 @@ from setuptools import setup, Extension
 
 include_dirs = [
     'src/DASpec',
-    '/home/dupu/Softwares/cmpfit/cmpfit-1.3a',   # add or remove path if necessary
+    '/Users/dupu/Softwares/cmpfit',             # add or remove path if necessary
+    '/opt/homebrew/include',                    # add or remove path if necessary
 ]
 
 library_dirs = [
-    '/home/dupu/Softwares/cmpfit/cmpfit-1.3a',   # add or remove path if necessary
+    '/Users/dupu/Softwares/cmpfit',             # add or remove path if necessary
+    '/opt/homebrew/lib',                        # add or remove path if necessary
 ]
 
 ext_swigDASpec = Extension(
