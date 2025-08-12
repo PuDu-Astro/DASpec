@@ -17,8 +17,6 @@ email: dupu@ihep.ac.cn
 2. swig
 3. cmpfit 
 (https://www.physics.wisc.edu/~craigm/idl/cmpfit.html)
-4. Bwidget & pybwidget 
-(apt install bwidget & https://sourceforge.net/projects/topographica/files/external-full-history/pybwidget-0.1.2_1.7.0.tar.gz/download for pybwidget)
 
 ### Install:
 1. edit paths in setup.py to include GSL and cmpfit headers and libraries
