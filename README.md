@@ -19,8 +19,8 @@ email: dupu@ihep.ac.cn
 (https://www.physics.wisc.edu/~craigm/idl/cmpfit.html)
 
 ### Install:
-1. edit paths in setup.py to include GSL and cmpfit headers and libraries
-2. run "python setup.py build_ext --inplace"
+1. Edit paths in setup.py to include GSL and cmpfit headers and libraries
+2. Run "python setup.py build_ext --inplace"
 3. Add the path to your $PYTHONPATH
 4. Add "DASpec_TEMPLATE_PATH" in .bashrc as the directory of template files, e.g., export DASpec_TEMPLATE_PATH="..."
 
