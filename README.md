@@ -29,6 +29,8 @@ email: dupu@ihep.ac.cn
 2. "DASpec_GUI.py -s spectrum_file.txt" (spectrum_file.txt with three columns: wavelength, flux, err)
 3. "DASpec_GUI.py -b list.txt" (list.txt is a list of many spectrum files)
 
+Important: Ensure your input spectrum wavelengths are sorted in ascending order (shorter wavelengths first).
+
 ### Interface:
 
 <img src="https://github.com/PuDu-Astro/images_for_doc/blob/master/Interface.png" width="720" height="438">
