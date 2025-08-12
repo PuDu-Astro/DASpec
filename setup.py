@@ -47,7 +47,7 @@ ext_carray = Extension(
 
 setup(
     name = 'DASpec',
-    version = '0.8',
+    version = '0.9',
     author = 'Pu Du', 
     description = """DASpec""", 
     ext_modules = [ext_swigDASpec, ext_carray], 
