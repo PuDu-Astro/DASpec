@@ -277,7 +277,7 @@ class DASpec_result:
             plt.ylabel(r"$\mathrm{Flux\ (\times 10^{%i}\ erg\ s^{-1}\ cm^{-2}\ \AA^{-1})}$" % (np.log10(self.units[i])))
 
             lines = []
-            plt.plot(w, self.DAmodels[i].calc(w, self.pararrays[i]))
+            plt.plot(w, self.DAmodels[i].calc_totpar(w, self.pararrays[i]))
             for j in range(len(self.pars[i])):
                 
                 if j + 1 == continuum_base:
