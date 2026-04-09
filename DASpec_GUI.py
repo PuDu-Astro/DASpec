@@ -911,13 +911,13 @@ class GUI(Tkinter.Frame):
         name = [l[1 + i[0]].replace('\n', '') for i in zip(range(len(l)), l) if '####' in i[1]]
         name_only = set(name)
         name_only = list(name_only)
-        sep_name = zip(sep, name)
+        sep_name = dict(zip(name, sep))
         index_tot = []
         for j in name_only:
-            index = [i for i in sep_name if j in i]
+            index = [sep_name[i] for i in sep_name if j in i]
             index = index[-1]
             #print(j, index)
-            index_tot.append(index)
+            index_tot.append([index])
     
         index_tot = sorted(index_tot)
         end_tot = []
